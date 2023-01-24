@@ -1,0 +1,38 @@
+site_name: EAM Documentation
+theme:  
+  name: material
+  theme:
+  language: en
+  features:
+    - navigation.footer
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/huddeldaddel/eamdocs
+extra_javascript:
+  - static/js/tablesort.min.js
+  - static/js/tablesort.js
+plugins:  
+  - build_plantuml:
+      render: 'server' # or "local" for local rendering
+      bin_path: '/usr/local/bin/plantuml' # ignored when render: server
+      server: 'http://www.plantuml.com/plantuml' # official plantuml server
+      disable_ssl_certificate_validation: true # for self-signed and invalid certs
+      output_format: 'svg' # or "png"
+      diagram_root: 'docs/diagrams'
+      output_folder: 'img'
+      input_folder: 'src'
+      input_extensions: 'puml'
+  - search
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - tables

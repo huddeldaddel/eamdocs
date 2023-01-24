@@ -1,0 +1,5 @@
+@startuml Test
+
+[Alice] --> [Bob]
+
+@enduml
