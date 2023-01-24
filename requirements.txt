@@ -1,0 +1,1 @@
+mkdocs mkdocs_puml mkdocs-material

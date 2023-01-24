@@ -13,4 +13,9 @@ graph LR
 
 ## Plantuml
 
-![file](diagrams/img/Test.svg)
+```puml
+@startuml
+A -> B: start handshake
+B -> A: close handshake
+@enduml
+```
