@@ -14,8 +14,7 @@ graph LR
 ## Plantuml
 
 ```puml
-@startuml
-A -> B: start handshake
-B -> A: close handshake
-@enduml
+component Alice
+url of Alice is [[http://www.google.com]]
+[Alice]--> [Bob]
 ```
